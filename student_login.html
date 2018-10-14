@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Login</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="logo.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#test").hide();
+			});
+            function DisableElements(){
+                var Button = document.getElementById("submit");
+                var text1 =document.getElementById("s_id");
+                var text2 =document.getElementById("s_pass");
+                Button.disabled = true ;
+                text1.readOnly=true;
+                text2.readOnly=true;
+			}
+		</script>
+        <style>
+            * { box-sizing: border-box; }
+            body{
+			background-image: url("univ.jpg");
+			background-size: 1366px 674px;
+			background-repeat: no-repeat;
+            }
+            .screen_navigator{
+			margin-top:25px;
+			margin-left: 250px;
+			margin-right: 80px;
+			height: 600px;
+			width: 780px;
+			border-radius: 6px;
+			background-color: rgba(255, 255,255,0.8);
+			box-shadow: 0px 0px 20px 0px #585858;
+            }
+            table.first{
+			padding: 15px;
+			padding-bottom: 0px;
+            }
+            .title{
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			font-size: xx-large;
+			vertical-align: middle;
+			color: #003366;
+			padding-left: 15px;
+            }
+            .logo{ padding-left: 15px }
+            .main{
+			padding-bottom: 30px;
+			padding-left: 20px;
+			padding-right: 20px;
+            }
+            .stZone{
+			font-family:Cochin, Georgia, Times;
+			font-size: xx-large;
+			color:#cc0c0c;
+			padding-bottom: 7px;
+			position: relative;
+			left:250px;
+            }
+            .descript{
+			width: 740px;
+			font-family: Cambria;
+			font-size: 17px;
+			font-weight: 500;
+			line-height: 17px;
+			font-stretch: normal;
+			padding:4px; 
+            }
+            .login{
+			position: relative;
+			width: 600px;
+			height: 310px;
+			background: #eaeaea;
+			border: solid 1px #16329a;
+			margin: 15px auto;
+			top: -29px;
+			left: 0px;
+            }
+            .ff_sec{ padding-left:40px }
+            .fform{
+			height: 237px;
+			float: left;
+			padding: 40px;
+			padding-bottom: 0;
+            }
+            .title2{
+			color:#7b7a7a;
+			font-size:30px;
+			font-family: Oswald;
+			font-weight: 500;
+			padding: 0px 0 12px 0;
+			border-bottom: solid 1px #d4d4d4 ;
+			width: 350px;
+            }
+            table.second{
+			margin-top: 20px;
+			width:auto;
+            }
+            .labels{
+			height: 40px;
+			font-size: 16px;
+			
+            }
+            .inputText{
+			width:250px;
+			height:30px;
+            padding-left: 5px;
+            }
+			.wrPass{ display: inline-block; color: red; position:relative; left:-220px; margin-top: 10px; font-size: 16px; }
+            .bt, .startQ{
+			border: none;
+			color: white;
+			/*padding: 5px 10px;*/
+			text-align: center;
+			font-size: 15px;
+			height: 35px; width:120px;
+			border-radius: 4px;
+            }
+            .bt{
+			height: 35px; width:120px;
+			background: #16329a;
+            }
+            .bt:hover{ background: #f3891c; }
+            .startQ{ background: #e0872b; height: 35px; width:120px; margin-left:6px;  }
+            .startQ:hover{ background: #f79c3e; }
+		</style>
+	</head>
+    <body>
+        <div class="screen_navigator">
+            <table class="first">
+                <tr>
+                    <td class="logo"><a href="#"><img src="ASU_logo.png" height="120px" width="140px"></a></td>
+                    <td class="title">Faculty of Science CS Division</td>
+				</tr>
+			</table>
+            <div class="main">
+                <div class="stZone">Student Zone</div>
+                <div class="descript">welcome to your new student zone.
+                    This services are tailored to meet your expectations as part of our continuous development of student services. your feedback and Comments at anytime.
+                    If you have any questions please contact us: 24821069 - 24821633 
+				</div>
+			</div>
+            <div class="login">
+				<form  method="post" class="fform">
+					<div class="title2">Login</div>
+					<div class="fields">
+						<table class="second">
+							<tr>
+								<td class="labels">Student ID</td>
+								<td class="labels"><input type="text" name="student_id" class="inputText" id="s_id"></td>
+							</tr>
+							<tr>
+								<td class="labels">Password</td>
+								<td class="labels"><input type="password" name="student_password" class="inputText" id="s_pass"></td>
+							</tr>
+							<tr><td>  </td>
+								<td class="labels">
+									<input type="submit" value="Login" name="submit" id="submit" class="bt">
+									<button class="bt">Clear</button>
+								</td>
+								<td class="labels"></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
